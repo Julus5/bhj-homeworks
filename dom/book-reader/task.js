@@ -13,8 +13,10 @@ links.forEach(elem => {
 
 		if (elem.classList.contains('font-size_small')) {
 			book.classList.add('book_fs-small');
+			book.classList.remove('book_fs-big');
 		} else if (elem.classList.contains('font-size_big')) {
 			book.classList.add('book_fs-big');
+			book.classList.remove('book_fs-small');
 		} else {
 			book.classList.remove('book_fs-small');
 			book.classList.remove('book_fs-big');
