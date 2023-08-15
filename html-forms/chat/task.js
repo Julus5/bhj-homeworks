@@ -14,7 +14,7 @@ document.addEventListener('click', () => {
 
 
 document.addEventListener('keydown', e => {
-    if (e.keyCode === 13 && input.value != '') {
+    if (e.key === "Enter" && input.value.trim() != '') {
         let time = new Date().toLocaleTimeString();
         let robotMessege = randomMessage[Math.floor(Math.random()*randomMessage.length)];
         messages.innerHTML += `
@@ -34,7 +34,6 @@ document.addEventListener('keydown', e => {
             </div>
             </div>
         `;  
+        input.value = "";
     }
 });
-
-
