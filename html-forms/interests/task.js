@@ -5,11 +5,12 @@ for (let item of interests) {
     if (closest) {
         const checkBox = closest.querySelector(".interest__check");
         checkBox.onclick = () => {
-            if (checkBox.checked) {
-                interestCheck(closest, true);
-            } else {
-                interestCheck(closest, false);
-            };
+            interestCheck(closest, checkBox.checked);
+            // if (checkBox.checked) {
+            //     interestCheck(closest, true);
+            // } else {
+            //     interestCheck(closest, false);
+            // };
         };
     };
 };
@@ -20,6 +21,9 @@ function interestCheck(element, checked) {
         i.checked = checked;
     };
 };
+
+
+
 
 
 
