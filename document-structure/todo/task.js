@@ -14,13 +14,19 @@ tasksAdd.addEventListener('click', (e) => {
             </div>`
         );
         taskInput.value = '';
-
-        let task = document.querySelector(".task");
-        let taskRemove = task.querySelector(".task__remove");
-        taskRemove.addEventListener("click", () => {
-            task.remove()
-        });
     };
-
-   
+    deleteTask()
 });
+
+function deleteTask() {
+    const taskRemove = Array.from(document.querySelectorAll(".task__remove"))
+    for (let item of taskRemove) {
+        item.addEventListener("click", (e) => {          
+            e.preventDefault()
+            let deleteElement = item.closest(".task")
+            deleteElement.remove()
+        })
+    }   
+};
+
+
