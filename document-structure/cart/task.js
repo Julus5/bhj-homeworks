@@ -30,7 +30,7 @@ for (let i = 0; i < productAdd.length; i++) {
         if (children !== [] && indx != -1) {
             const cartProductCount = Array.from(document.querySelectorAll(".cart__product-count"))
 
-            cartProductCount[indx].textContent = parseInt(cartProductCount[indx].textContent) + parseInt(producValue[i].textContent)
+            cartProductCount[indx].textContent = parseInt(cartProductCount[indx].textContent) + parseInt(productValue[i].textContent)
         }
         else {
             cartProducts.insertAdjacentHTML('beforeEnd',
@@ -41,5 +41,11 @@ for (let i = 0; i < productAdd.length; i++) {
         }
     })
 };
+
+
+
+
+
+
 
 
